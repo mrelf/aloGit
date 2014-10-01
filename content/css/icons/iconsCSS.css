@@ -1,0 +1,17 @@
+@font-face {
+  font-family: AngularProj;
+  src: url('/content/fontIcons/angularProj.eot') format('eot'), url('/content/fontIcons/angularProj.woff') format('woff'), url('/content/fontIcons/angularProj.ttf') format('truetype');
+  
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+[data-icon]:before {
+  font-family: AngularProj;
+  content: attr(data-icon);
+  speak: none;
+}
+.addIcon:before {
+  content: '\e00d';
+  font-family: AngularProj;
+  color: green;
+  font-size: 2em;
+}

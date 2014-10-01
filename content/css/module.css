@@ -1,0 +1,45 @@
+/******************/
+/*** navigation ***/
+/******************/
+
+/*  general settings   */
+nav {
+    width: 100%;   
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+}
+nav a{
+    width: 100%;   
+    text-decoration: none;
+    border-bottom: 0;
+}
+
+/*  vertical nav   */
+nav ul.vertical li {
+    width: 100%;
+    display: flex;
+}
+
+/*   dark color bg navigation   */
+.darkColoredNav a{
+    color: var(--dark-bg-font-color);
+    background: var(--colored-bg);
+}
+.darkColoredNav a.active{
+    background: var(--light-bg-color);
+    color: var(--light-bg-font-color);
+}
+
+/*   main navigation   */
+.levelOne li {
+    padding: 15px auto;
+    margin: 5px 0;
+}
+.levelOne a{
+    padding: 2rem 1rem;
+    border-bottom: 1px solid var(--dark-bg-border-color);
+    border-top: 1px solid var(--dark-bg-border-color);
+    font-size: 1.3rem;

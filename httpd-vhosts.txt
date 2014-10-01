@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/alo"
+    ServerName angularproj.com
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/alo"
+    ServerName angularproj.com
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/alo"
+    ServerName angularproj.com
+</VirtualHost>

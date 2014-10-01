@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="en" ng-app="taskManager">
+    <head>
+        <title>AngularJS Test Project</title>
+        <meta charset="utf-8" />
+        
+        <base href="/" />
+        
+        <link rel="stylesheet" href="content/css/lib/jquery-ui.min.css">
+        <link rel="stylesheet" href="content/css/variables.css">
+        <link rel="stylesheet" href="content/css/main.css">
+        <link rel="stylesheet" href="content/css/module.css">
+        
+        <meta name="author" content="Propria mea Persoana">
+        <meta name="description" content="este doar un test pentru AngularJS">
+        
+    </head>
+    
+    <body>
+        
+        <div id="wrap">
+            <!--    START left side nav   -->
+            <div class="navigation">
+                <nav class="nav levelOne darkColoredNav">
+                    <ul set-active-menu='active' class='vertical'>
+                        <li><a href="/create-task"><span class='icon addIcon'></span>Add / Create</a></li>
+                        <li><a href='/in-progress'><span class='icon workIcon'></span>In progress</a></li>
+                        <li><a href='/parked-out'><span class='icon inactiveIcon'></span>Parked Out</a></li>
+                        <li><a href='/backlog'><span class='icon folderIcon'></span>Backlog</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--    END left side nav   -->
+            
+            <!--    START main content   -->
+            <div class="content">
+                
+                <!--container for angular partial views-->
+                <div ng-view></div>
+                
+            </div>
+            <!--    END left side nav   -->
+        </div>
+        <script src="scripts/lib/angular.min.js"></script>
+        <script src="scripts/lib/angular-route.min.js"></script>
+        <script src="app/main.js"></script>
+        <script src="app/mainNav.js"></script>
+        
+    </body>
+</html>
