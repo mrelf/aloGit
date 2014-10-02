@@ -55,7 +55,8 @@ taskManager.directive('setActiveMenu', function($location){
                 currentLink = pathLink;
                 currentLink.addClass('active');
             }
-            console.log(pathLink);
+            utils.localStorageItem.alo();
+            utils.localStorageItem.alo2('ceva aici');
         })
     }
 })
