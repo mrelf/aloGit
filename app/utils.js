@@ -1,10 +1,15 @@
 var utils = utils || {};
 
-utils.localStorageItem = {
-    alo: function(){
+utils.localStorageItem = (function(){
+    function alo(){
         return alert('alo');  
-    },
-    alo2: function(strings){
+    }
+    function alo2(strings){
         return alert(strings);
     }
-}
+    
+    return {
+        aloMe: alo,
+        aloMeTwo: alo2
+    };
+})();
