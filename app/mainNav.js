@@ -1,23 +1,24 @@
+'use strict';
 //main nav controllers
-taskManager.controller('CreateTaskController', function($scope){
+taskManager.controller('CreateTaskController', function ($scope) {
     $scope.message = 'Create a new task';
 });
 
-taskManager.controller('InProgressController', function($scope){
+taskManager.controller('InProgressController', function ($scope) {
     $scope.message = 'In progress';
 });
 
-taskManager.controller('ParkedOutController', function($scope){
+taskManager.controller('ParkedOutController', function ($scope) {
     $scope.message = 'parked out';
 });
 
-taskManager.controller('BacklogController', function($scope){
+taskManager.controller('BacklogController', function ($scope) {
     $scope.message = 'backlog';
 });
 
 //set active element on menu
-taskManager.directive('setActiveMenu', function($location){
-    return function(scope, element, attrs){
+taskManager.directive('setActiveMenu', function ($location) {
+    return function (scope, element, attrs) {
         //variable list for function
         //var to hold all links in menu
         var links = element.find('a'),
@@ -41,22 +42,23 @@ taskManager.directive('setActiveMenu', function($location){
             i;
         
         //collect all links and hrefs
-        for(i = 0; i < links.length; i++){            
+        for (i = 0; i < links.length; i++) {
             link = angular.element(links[i]);
             url = link.attr('href');
             urlMap[url] = link;
-        };
-        scope.$on('$routeChangeStart', function(){
+        }
+        scope.$on('$routeChangeStart', function () {
             pathLink = urlMap[$location.path()];
-            if(pathLink){
-                if(currentLink){
+            if (pathLink) {
+                if (currentLink) {
                     currentLink.removeClass('active');
                 }
                 currentLink = pathLink;
                 currentLink.addClass('active');
             }
-            utils.localStorageItem.aloMe();
-            utils.localStorageItem.aloMeTwo('ceva aici');
+            utils.localStorageItem.saveElement('setActiveMenu', currentLink);
+            //utils.localStorageItem.getElement('setActiveMenu');
+            console.log(utils.localStorageItem.elementContainer);
         })
     }
-})
+});
