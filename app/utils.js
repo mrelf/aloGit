@@ -18,7 +18,7 @@ utils.localStorageItem = (function () {
             keyElemContainer.push(keyElem);
     }
     function get(keyElem) {
-        localDB.getItem(keyElem);
+        return localDB.getItem(keyElem);
     }
     
     return {

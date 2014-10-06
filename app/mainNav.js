@@ -48,7 +48,17 @@ taskManager.directive('setActiveMenu', function ($location) {
             urlMap[url] = link;
         }
         scope.$on('$routeChangeStart', function () {
-            pathLink = urlMap[$location.path()];
+            if (utils.localStorageItem.elementContainer.indexOf('setActiveMenu') == -1) {
+                //element not yet saved in localStorage
+                pathLink = urlMap[$location.path()];
+                //STORE DE OBJECT IN LOCALSTORAGE NOT THE STRING!!!!!!!!!!!
+                //more info see console log
+            }    
+            //} else {
+                //pathLink = urlMap[];   
+                console.log(urlMap[$location.path()]);
+            //}*/
+            
             if (pathLink) {
                 if (currentLink) {
                     currentLink.removeClass('active');
@@ -56,9 +66,7 @@ taskManager.directive('setActiveMenu', function ($location) {
                 currentLink = pathLink;
                 currentLink.addClass('active');
             }
-            utils.localStorageItem.saveElement('setActiveMenu', currentLink);
-            //utils.localStorageItem.getElement('setActiveMenu');
-            console.log(utils.localStorageItem.elementContainer);
+            utils.localStorageItem.saveElement('setActiveMenu', urlMap[$location.path()]);
         })
     }
 });
