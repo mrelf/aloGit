@@ -17,11 +17,13 @@ taskManager.controller('BacklogController', function ($scope) {
 });
 
 //save state to localStorage
-taskManager.controller('setActiveMenu', function ($scope, $state, $location, $rootScope) {
+taskManager.controller('setActiveMenu', function ($scope, $state, $location, $rootScope, StoredLocally) {
     //get the current state
     $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
         $state.current = toState;
         var currentState = $state.current.name;
-        console.log(currentState);
+        
+        StoredLocally.saveItem('setActiveMenu', currentState);
+        console.log(localStorage);
     })
 });

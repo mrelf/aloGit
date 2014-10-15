@@ -8,8 +8,8 @@ built as an angularJS service
 taskManager.factory('StoredLocally', function ($state, $rootScope) {
     var storedElem = {};
     
-    storedElem.test = function () {
-        console.log($rootScope);   
+    storedElem.saveItem = function (lsKey, lsValue) {
+            localStorage.setItem(lsKey, lsValue);
     }
     
     return storedElem;
