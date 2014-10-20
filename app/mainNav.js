@@ -21,7 +21,8 @@ taskManager.controller('setActiveMenu', function ($scope, $state, $location, $ro
     //get the current state
     $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
         $state.current = toState;
-        var currentState = $state.current.name;
+        //var currentState = $state.current.name;
+        var currentState = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
         
         StoredLocally.saveItem('setActiveMenu', currentState);
         console.log(localStorage);
