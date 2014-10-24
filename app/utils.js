@@ -13,7 +13,8 @@ taskManager.factory('StoredLocally', function ($state, $rootScope) {
     }
     
     storedElem.getItem = function(lsKey) {
-        return JSON.parse(localStorage.getItem(lsKey));
+        var retrievedObject = localStorage.getItem(lsKey);
+        return JSON.parse(retrievedObject);
     }
     
     return storedElem;

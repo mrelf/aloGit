@@ -2,7 +2,6 @@ var taskManager = angular.module('taskManager', ['ui.router']);
 
 //main app routing settings
 taskManager.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-    $urlRouterProvider.otherwise("/create-task");
     $locationProvider.html5Mode(true);
     $stateProvider
         .state('create-task', {
