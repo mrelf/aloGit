@@ -18,13 +18,18 @@ taskManager.controller('BacklogController', function ($scope) {
 
 //save state to localStorage
 taskManager.controller('setActiveMenu', function ($scope, $state, $location, $rootScope, StoredLocally) {
-    var retrievedObj = StoredLocally.getItem('setActiveMenu');
+    var retrievedObj;
+    if (StoredLocally.getItem('setActiveMenu') !== null) {
+        retrievedObj = StoredLocally.getItem('setActiveMenu');
+    } else {
+        retrievedObj = 'create-task';
+    }
     //set the state if it is saved in LS
     $state.transitionTo(retrievedObj);
     //get the current state
-    $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+    $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $state.current = toState;
         var currentState = $state.current.name;
         StoredLocally.saveItem('setActiveMenu', currentState);
-    })
+    });
 });

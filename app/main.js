@@ -4,8 +4,8 @@ var taskManager = angular.module('taskManager', ['ui.router']);
 taskManager.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $stateProvider
-        .state('create-task', {
-            name: 'create-task',
+        .state('/', {
+            name: '/',
             url: '/create-task',
             templateUrl: 'partialViews/createTask.html',
             controller: 'CreateTaskController'
