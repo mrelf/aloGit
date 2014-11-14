@@ -7,28 +7,49 @@ taskManager.config(function ($stateProvider, $urlRouterProvider, $locationProvid
         .state('/', {
             name: '/',
             url: '/create-task',
-            templateUrl: 'partialViews/createTask.html',
-            controller: 'CreateTaskController'
+            views: {
+                'alo2': {
+                    templateUrl: 'partialViews/submenuItems.html',
+                    controller: 'submenuItemsController'
+                },
+                'alo': {
+                    templateUrl: 'partialViews/createTask.html',
+                    controller: 'CreateTaskController',
+                },
+            }
+            
         })
         
         .state('in-progress', {
             name: 'in-progress',
             url: '/in-progress',
-            templateUrl: 'partialViews/inProgress.html',
-            controller: 'InProgressController'
+            views: {
+                'alo': {
+                    templateUrl: 'partialViews/inProgress.html',
+                    controller: 'InProgressController'
+                }
+            }
         })
         
         .state('parked-out', {
             name: 'parked-out',
             url: '/parked-out',
-            templateUrl: 'partialViews/parkedOut.html',
-            controller: 'ParkedOutController'
+            views: {
+                'alo': {
+                    templateUrl: 'partialViews/parkedOut.html',                    
+                    controller: 'ParkedOutController'
+                }
+            }
         })
         
         .state('backlog', {
             name: 'backlog',
             url: '/backlog',
-            templateUrl: 'partialViews/backlog.html',
-            controller: 'BacklogController'
+            views: {
+                'alo': {
+                    templateUrl: 'partialViews/backlog.html',        
+                    controller: 'BacklogController'
+                }
+            }
         })
 });

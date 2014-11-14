@@ -16,6 +16,10 @@ taskManager.controller('BacklogController', function ($scope) {
     $scope.message = 'backlog';
 });
 
+taskManager.controller('submenuItemsController', function($scope){
+    $scope.message = 'submenu Item';
+});
+
 //save state to localStorage
 taskManager.controller('setActiveMenu', function ($scope, $state, $location, $rootScope, StoredLocally) {
     var retrievedObj;
