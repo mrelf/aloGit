@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="content/css/variables.css">
         <link rel="stylesheet" href="content/css/main.css">
         <link rel="stylesheet" href="content/css/module.css">
+        <link rel="stylesheet" href="content/css/utils.css">
         
         <meta name="author" content="Propria mea Persoana">
         <meta name="description" content="este doar un test pentru AngularJS">
@@ -34,9 +35,9 @@
             
             <!--    START main content   -->
             <div class="content">
-                <div ui-view='alo2'></div>
+                <div ui-view='submenu-container' class='submenuContainer'></div>
                 <!--container for angular partial views-->
-                <div ui-view='alo'></div>
+                <div ui-view='mainContent-container' class='mainContentContainer'></div>
                 
             </div>
             <!--    END left side nav   -->

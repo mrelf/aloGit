@@ -3,6 +3,9 @@
     --dark-bg-font-color: #eee;
     --dark-bg-border-color: #666;
 
-    --light-bg-color: #fff;
-    --light-bg-font-color: #474747;
+    --light-bg-color: #fdfdfd;
+    --light-bg-font-color: #aaa;
+    --light-bg-font-color_darker: #474747;
+    --light-bg-border-color: #f2f2f2;
+    --light-bg-border-color_darker: #ddd;
 }

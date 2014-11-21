@@ -26,7 +26,7 @@ taskManager.controller('setActiveMenu', function ($scope, $state, $location, $ro
     if (StoredLocally.getItem('setActiveMenu') !== null) {
         retrievedObj = StoredLocally.getItem('setActiveMenu');
     } else {
-        retrievedObj = 'create-task';
+        retrievedObj = '/';
     }
     //set the state if it is saved in LS
     $state.transitionTo(retrievedObj);

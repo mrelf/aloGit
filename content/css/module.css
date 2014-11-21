@@ -15,6 +15,7 @@ nav a{
     width: 100%;   
     text-decoration: none;
     border-bottom: 0;
+    position: relative;
 }
 
 /*  vertical nav   */
@@ -26,13 +27,25 @@ nav ul.vertical li {
 /*   dark color bg navigation   */
 .darkColoredNav a{
     color: var(--dark-bg-font-color);
-    background: var(--colored-bg);
+    border-bottom: 1px solid var(--dark-bg-border-color);
+    border-top: 1px solid var(--dark-bg-border-color);
 }
 .darkColoredNav a.active{
     background: var(--light-bg-color);
-    color: var(--light-bg-font-color);
+    color: var(--light-bg-font-color_darker);
 }
-
+.lightColoredNav a{
+    color: var(--light-bg-font-color);
+    border-bottom: 1px solid var(--light-bg-border-color_darker);
+    border-top: 1px solid var(--light-bg-border-color_darker);
+}
+.lightColoredNav a.active, .lightColoredNav a:hover{
+    color: var(--light-bg-font-color_darker);
+}
+.lightColoredNav .active:after{
+    border: 1px solid var(--light-bg-border-color_darker);
+    background: var(--light-bg-color);
+}
 /*   main navigation   */
 .levelOne li {
     padding: 15px auto;
@@ -40,6 +53,19 @@ nav ul.vertical li {
 }
 .levelOne a{
     padding: 2rem 1rem;
-    border-bottom: 1px solid var(--dark-bg-border-color);
-    border-top: 1px solid var(--dark-bg-border-color);
     font-size: 1.3rem;
+}
+/* main navigation -- submenu */
+.levelOne--submenu li {
+    padding: 13px 0;
+}
+.levelOne--submenu a{
+    font-size: 1.2rem;
+    padding: 2rem 1rem;
+}
+.levelOne--submenu .active:after{
+    width: 51px;
+    height: 51px;
+    top: 9px;
+    right: -25px;
+}

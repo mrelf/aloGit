@@ -8,11 +8,11 @@ taskManager.config(function ($stateProvider, $urlRouterProvider, $locationProvid
             name: '/',
             url: '/create-task',
             views: {
-                'alo2': {
+                'submenu-container': {
                     templateUrl: 'partialViews/submenuItems.html',
                     controller: 'submenuItemsController'
                 },
-                'alo': {
+                'mainContent-container': {
                     templateUrl: 'partialViews/createTask.html',
                     controller: 'CreateTaskController',
                 },
@@ -24,7 +24,7 @@ taskManager.config(function ($stateProvider, $urlRouterProvider, $locationProvid
             name: 'in-progress',
             url: '/in-progress',
             views: {
-                'alo': {
+                'mainContent-container': {
                     templateUrl: 'partialViews/inProgress.html',
                     controller: 'InProgressController'
                 }
@@ -35,7 +35,7 @@ taskManager.config(function ($stateProvider, $urlRouterProvider, $locationProvid
             name: 'parked-out',
             url: '/parked-out',
             views: {
-                'alo': {
+                'mainContent-container': {
                     templateUrl: 'partialViews/parkedOut.html',                    
                     controller: 'ParkedOutController'
                 }
@@ -46,7 +46,7 @@ taskManager.config(function ($stateProvider, $urlRouterProvider, $locationProvid
             name: 'backlog',
             url: '/backlog',
             views: {
-                'alo': {
+                'mainContent-container': {
                     templateUrl: 'partialViews/backlog.html',        
                     controller: 'BacklogController'
                 }

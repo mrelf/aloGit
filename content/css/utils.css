@@ -1,0 +1,19 @@
+*:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+*:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/*  ELEMENT DECORATION  */
+/*emprty triangle--orientation: right*/
+.decoration--emptyTriangleR .active:after {
+    transform: rotate(45deg);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
