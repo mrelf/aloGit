@@ -35,7 +35,9 @@
             
             <!--    START main content   -->
             <div class="content">
-                <div ui-view='submenu-container' class='submenuContainer'></div>
+                <div id='submenuContainer'>
+                    <div ui-view='submenu-container' class='submenuContainer'></div>
+                </div>
                 <!--container for angular partial views-->
                 <div ui-view='mainContent-container' class='mainContentContainer'></div>
                 
