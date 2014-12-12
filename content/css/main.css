@@ -90,3 +90,12 @@ h4 {
     background: var(--light-bg-color);
     border-right: 1px solid var(--light-bg-border-color_darker);
 }
+
+.alo {
+    max-width: 100px;
+    transition: .8s;
+    display: block;
+}
+#submenuContainer {
+    max-width: 0;
+}

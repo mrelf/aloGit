@@ -2,7 +2,6 @@
 //main nav controllers
 taskManager.controller('CreateTaskController', function ($scope, $state) {
     $scope.message = 'Create a new task';
-    console.log($state);
 });
 
 taskManager.controller('InProgressController', function ($scope) {

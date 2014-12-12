@@ -23,11 +23,11 @@
             <!--    START left side nav   -->
             <div class="navigation">
                 <nav class="nav levelOne darkColoredNav">
-                    <ul ng-controller='setActiveMenu as sam' class='vertical' role="navigation">
-                        <li><a ui-sref="/" ui-sref-active='active'><span class='icon addIcon'></span>Add / Create</a></li>
-                        <li><a ui-sref='in-progress' ui-sref-active='active'><span class='icon workIcon'></span>In progress</a></li>
-                        <li><a ui-sref='parked-out' ui-sref-active='active'><span class='icon inactiveIcon'></span>Parked Out</a></li>
-                        <li><a ui-sref='backlog' ui-sref-active='active'><span class='icon folderIcon'></span>Backlog</a></li>
+                    <ul data-ng-controller='setActiveMenu as sam' class='vertical' role="navigation">
+                        <li><a data-ui-sref="/" data-ui-sref-active='active'><span class='icon addIcon'></span>Add / Create</a></li>
+                        <li><a data-ui-sref='in-progress' data-ui-sref-active='active'><span class='icon workIcon'></span>In progress</a></li>
+                        <li><a data-ui-sref='parked-out' data-ui-sref-active='active'><span class='icon inactiveIcon'></span>Parked Out</a></li>
+                        <li><a data-ui-sref='backlog' data-ui-sref-active='active'><span class='icon folderIcon'></span>Backlog</a></li>
                     </ul>
                 </nav>
             </div>
@@ -36,10 +36,10 @@
             <!--    START main content   -->
             <div class="content">
                 <div id='submenuContainer'>
-                    <div ui-view='submenu-container' class='submenuContainer'></div>
+                    <div data-ui-view='submenu-container' class='submenuContainer'></div>
                 </div>
                 <!--container for angular partial views-->
-                <div ui-view='mainContent-container' class='mainContentContainer'></div>
+                <div data-ui-view='mainContent-container' class='mainContentContainer'></div>
                 
             </div>
             <!--    END left side nav   -->
