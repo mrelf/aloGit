@@ -99,3 +99,7 @@ h4 {
 #submenuContainer {
     max-width: 0;
 }
+
+.css-class {
+    color: green;
+}

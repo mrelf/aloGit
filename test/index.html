@@ -28,12 +28,29 @@
                 .otherwise({redirectTo: '/'});
         });
         
-        demoApp.controller('simpleController', function($scope) {
-            $scope.customers = [
-                {name: 'John Smith', city: 'Phoenix'},
-                {name: 'Jon Doe', city: 'New York'},
-                {name: 'Jane Doe', city: 'San Francisco'}
-            ]; 
+        demoApp.factory('simpleFactory', function(){
+            var customers = [
+                { name: 'John Smith', city: 'Phoenix' },
+                { name: 'John Doe', city: 'New York' },
+                { name: 'Jane Doe', city: 'San Francisco' }
+            ];
+            
+            var factory = {};
+            factory.getCustomers = function() {
+                return customers;
+            };
+            
+            return factory;
+        });
+        
+        demoApp.controller('simpleController', function($scope, simpleFactory) {
+            $scope.customers = [];
+            
+            init();
+            
+            function init() {
+                $scope.customers = simpleFactory.getCustomers();
+            }
             
             $scope.addCustomer = function() {
                 $scope.customers.push({
