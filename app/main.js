@@ -11,10 +11,6 @@ taskManager.config(function ($stateProvider, $urlRouterProvider, $locationProvid
                 'mainContent-container': {
                     templateUrl: 'partialViews/createTask.html',
                     controller: 'CreateTaskController'
-                },
-                'submenu-container': {
-                    templateUrl: 'partialViews/submenuItems.html',
-                    controller: 'submenuItemsController'
                 }
             }
             

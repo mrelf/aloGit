@@ -19,7 +19,10 @@ nav a{
 }
 
 /*  vertical nav   */
-nav ul.vertical li {
+nav .vertical {
+    flex: 1 100%;
+}
+nav .vertical li {
     width: 100%;
     display: flex;
 }
@@ -39,12 +42,14 @@ nav ul.vertical li {
     border-bottom: 1px solid var(--light-bg-border-color_darker);
     border-top: 1px solid var(--light-bg-border-color_darker);
 }
-.lightColoredNav a.active, .lightColoredNav a:hover{
+.lightColoredNav .active, .lightColoredNav a:hover{
     color: var(--light-bg-font-color_darker);
 }
 .lightColoredNav .active:after{
     border: 1px solid var(--light-bg-border-color_darker);
     background: var(--light-bg-color);
+    transform: rotate(45deg);
+    z-index: -1;
 }
 /*   main navigation   */
 .levelOne li {

@@ -69,7 +69,7 @@ h4 {
     display: flex;
 }
 .mainContentContainer {
-    display: inline-block;
+    display: flex;
 }
 
 /** navigation settings **/
@@ -89,17 +89,4 @@ h4 {
     margin-left: 0;
     background: var(--light-bg-color);
     border-right: 1px solid var(--light-bg-border-color_darker);
-}
-
-.alo {
-    max-width: 100px;
-    transition: .8s;
-    display: block;
-}
-#submenuContainer {
-    max-width: 0;
-}
-
-.css-class {
-    color: green;
 }

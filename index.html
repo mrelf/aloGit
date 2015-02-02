@@ -24,7 +24,7 @@
             <div class="navigation">
                 <nav class="nav levelOne darkColoredNav">
                     <ul data-ng-controller='setActiveMenu as sam' class='vertical' role="navigation">
-                        <li><a data-ui-sref="/" data-ui-sref-active='active' data-ng-click="myCssVar = 'css-class'"><span class='icon addIcon'></span>Add / Create</a></li>
+                        <li><a data-ui-sref="/" data-ui-sref-active='active' data-ng-click="myCssVar = 'css-class'"><span class='icon addIcon'></span>Add / Create</a></li>                        
                         <li><a data-ui-sref='in-progress' data-ui-sref-active='active'><span class='icon workIcon'></span>In progress</a></li>
                         <li><a data-ui-sref='parked-out' data-ui-sref-active='active'><span class='icon inactiveIcon'></span>Parked Out</a></li>
                         <li><a data-ui-sref='backlog' data-ui-sref-active='active'><span class='icon folderIcon'></span>Backlog</a></li>
@@ -35,9 +35,6 @@
             
             <!--    START main content   -->
             <div class="content">
-                <div id='submenuContainer'>
-                    <div data-ui-view='submenu-container' class='submenuContainer'></div>
-                </div>
                 <!--container for angular partial views-->
                 <div data-ui-view='mainContent-container' class='mainContentContainer'></div>
                 

@@ -1,1 +1,12 @@
+<!--subnavigation item-->
+<nav class="submenuContainer subnav lightColoredNav levelOne--submenu">
+    <ul class="vertical" role="navigation">
+        <li data-ng-repeat="submenutItem in submenuItems"><a data-ng-href="{{ submenutItem.itemUrl }}">{{ submenutItem.itemText }}</a></li>
+    </ul>
+</nav>
+
+<!--content item-->
+<div class="contentContainer">
 {{ message }}
+</div>
+

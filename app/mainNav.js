@@ -2,6 +2,11 @@
 //main nav controllers
 taskManager.controller('CreateTaskController', function ($scope, $state) {
     $scope.message = 'Create a new task';
+    $scope.submenuItems = [
+        {itemUrl: '#', itemText: 'Item One'},
+        {itemUrl: '#', itemText: 'Item Two'},
+        {itemUrl: '#', itemText: 'Item Three'}
+    ]
 });
 
 taskManager.controller('InProgressController', function ($scope) {
