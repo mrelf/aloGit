@@ -2,11 +2,6 @@
 //main nav controllers
 taskManager.controller('CreateTaskController', function ($scope, $state) {
     $scope.message = 'Create a new task';
-    $scope.submenuItems = [
-        {itemUrl: '#', itemText: 'Item One'},
-        {itemUrl: '#', itemText: 'Item Two'},
-        {itemUrl: '#', itemText: 'Item Three'}
-    ]
 });
 
 taskManager.controller('InProgressController', function ($scope) {
@@ -24,6 +19,14 @@ taskManager.controller('BacklogController', function ($scope) {
 taskManager.controller('submenuItemsController', function($scope){
     $scope.message = 'submenu Item';
 });
+
+taskManager.controller('navCtrl', function($scope) {
+    $scope.submenuItems = [
+        {itemUrl: '#', itemText: 'Item One'},
+        {itemUrl: '#', itemText: 'Item Two'},
+        {itemUrl: '#', itemText: 'Item Three'}
+    ];    
+})
 
 //save state to localStorage
 taskManager.controller('setActiveMenu', function ($scope, $state, $location, $rootScope, StoredLocally) {
