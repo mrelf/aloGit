@@ -25,7 +25,10 @@ taskManager.controller('navCtrl', function($scope) {
         {itemUrl: '#', itemText: 'Item One'},
         {itemUrl: '#', itemText: 'Item Two'},
         {itemUrl: '#', itemText: 'Item Three'}
-    ];    
+    ];
+    $scope.alo = function() {
+        $scope.class = 'alo';
+    }
 })
 
 //save state to localStorage

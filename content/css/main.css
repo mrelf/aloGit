@@ -89,3 +89,7 @@ h4 {
     background: var(--light-bg-color);
     border-right: 1px solid var(--light-bg-border-color_darker);
 }
+
+.alo {
+    background: red;
+}
