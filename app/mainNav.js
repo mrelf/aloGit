@@ -21,13 +21,10 @@ taskManager.controller('submenuItemsController', function($scope){
 });
 
 taskManager.controller('navCtrl', function($scope) {
-    $scope.submenuItems = [
-        {itemUrl: '#', itemText: 'Item One'},
-        {itemUrl: '#', itemText: 'Item Two'},
-        {itemUrl: '#', itemText: 'Item Three'}
-    ];
+    $scope.mainmenuItems = taskManagerData.mainMenuItemsData;
+    $scope.submenuItems = taskManagerData.submenuItemsData;
     $scope.alo = function() {
-        $scope.class = 'alo';
+        $scope.class = true;
     }
 })
 
