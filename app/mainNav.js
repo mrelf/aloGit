@@ -24,7 +24,7 @@ taskManager.controller('navCtrl', function($scope) {
     $scope.mainmenuItems = taskManagerData.mainMenuItemsData;
     $scope.submenuItems = taskManagerData.submenuItemsData;
     $scope.alo = function() {
-        $scope.class = true;
+        $scope.class = {true: 'alo', false: ''};
     }
 })
 
