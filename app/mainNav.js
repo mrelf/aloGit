@@ -20,12 +20,20 @@ taskManager.controller('submenuItemsController', function($scope){
     $scope.message = 'submenu Item';
 });
 
-taskManager.controller('navCtrl', function($scope) {
-    $scope.mainmenuItems = taskManagerData.mainMenuItemsData;
-    $scope.submenuItems = taskManagerData.submenuItemsData;
+taskManager.controller('navCtrl', function($scope, retrieveJsonFactory) {
+    $scope.mainmenuItems = {};
+    
+    retrieveJsonFactory.getData().then(function(response){
+        $scope.mainmenuItems = response.data;
+        console.log($scope.mainmenuItems);
+    });
+    console.log($scope.mainmenuItems);
+    //$scope.mainmenuItems = mainMenuItemsData;
+//    $scope.submenuItems = taskManagerData.submenuItemsData;
+/*    
     $scope.alo = function() {
         $scope.class = {true: 'alo', false: ''};
-    }
+    }*/
 })
 
 //save state to localStorage

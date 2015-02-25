@@ -1,0 +1,38 @@
+{
+    "mainMenu": {
+      "addCreate": {
+        "itemUrl": "/",
+        "itemIcon": "addIcon",
+        "itemText": "Add / Create"
+      },
+      "inProgress": {
+        "itemUrl": "in-progress",
+        "itemIcon": "workIcon",
+        "itemText": "In progress"
+      },
+      "parkedOut": {
+        "itemUrl": "parked-out",
+        "itemIcon": "inactiveIcon",
+        "itemText": "Parked Out"
+      },
+      "backlog": {
+        "itemUrl": "backlog",
+        "itemIcon": "folderIcon",
+        "itemText": "Backlog"
+      }
+    },
+    "submenuItem": {
+      "itemOne": {
+        "itemUrl": "#",
+        "itemText": "Item One"
+      },
+      "itemTwo": {
+        "itemUrl": "#",
+        "itemText": "Item Two"
+      },
+      "itemThree": {
+        "itemUrl": "#",
+        "itemText": "Item Three"
+      }
+    }
+  }

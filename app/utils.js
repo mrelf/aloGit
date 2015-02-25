@@ -19,3 +19,23 @@ taskManager.factory('StoredLocally', function ($state, $rootScope) {
     
     return storedElem;
 });
+taskManager.factory('retrieveJsonFactory', function($http, $q){
+    function getDataService() {
+        var self = this;
+        
+        self.data = null;
+        
+        self.getData = function() {
+            
+            
+            $http.get('../data/menu.json')
+                .then(function(response){
+                    self.data = response.data;
+                    console.log(self.data);
+                })
+            return self.data;
+        }
+        
+    }
+    return new getDataService();
+})
