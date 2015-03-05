@@ -32,13 +32,8 @@ taskManager.controller('navCtrl', function($scope, retrieveJsonFactory) {
 //    $scope.submenuItems = taskManagerData.submenuItemsData;
 /*    
     $scope.alo = function() {
-<<<<<<< HEAD
         $scope.class = {true: 'alo', false: ''};
     }*/
-=======
-        $scope.class = true;
-    }
->>>>>>> parent of aaa9244... cv
 })
 
 //save state to localStorage
