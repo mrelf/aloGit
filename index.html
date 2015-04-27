@@ -24,12 +24,12 @@
             <div class="navigation" data-ng-controller='navCtrl'>
                 <nav class="nav levelOne darkColoredNav">
                     <ul data-ng-controller='setActiveMenu as sam' class='vertical' role="navigation">
-                        <li data-ng-repeat='mainmenuItem in mainmenuItems'><a data-ui-sref="{{ mainmenuItem.itemUrl }}" data-ui-sref-active='active'><span class='icon addIcon' data-ng-class="{{ mainmenuItem.itemIcon }}"></span>{{ mainmenuItem.itemText }}</a></li>                        
+                        <li data-ng-repeat='mainmenuItem in mainmenuItems'><a data-ui-sref="{{ mainmenuItem.itemUrl }}" data-ui-sref-active='active' data-ng-click="checkSubmenu(mainmenuItem)"><span class='icon addIcon' data-ng-class="{{ mainmenuItem.itemIcon }}"></span>{{ mainmenuItem.itemText }}</a></li>                        
                     </ul>
                 </nav>
                 
                 <!--subnavigation item-->
-                <nav class="submenuContainer subnav lightColoredNav levelOne--submenu" data-ng-class="{'alo': class}">
+                <nav class="submenuContainer subnav lightColoredNav levelOne--submenu" data-ng-class="class">
                     <ul class="vertical" role="navigation">
                         <li data-ng-repeat="submenutItem in submenuItems"><a data-ng-href="{{ submenutItem.itemUrl }}">{{ submenutItem.itemText }}</a></li>
                     </ul>

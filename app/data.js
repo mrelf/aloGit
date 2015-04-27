@@ -6,8 +6,8 @@ taskManagerData.submenuItemsData = [
         {itemUrl: '#', itemText: 'Item Three'}
 ];
 taskManagerData.mainMenuItemsData = [
-    {itemUrl: '/', itemIcon: 'addIcon', itemText: 'Add / Create', itemMo: 'aa'},
-    {itemUrl: 'in-progress', itemIcon: 'workIcon', itemText: 'In progress', itemMo: ''},
-    {itemUrl: 'parked-out', itemIcon: 'inactiveIcon', itemText: 'Parked Out', itemMo: ''},
-    {itemUrl: 'backlog', itemIcon: 'folderIcon', itemText: 'Backlog', itemMo: ''},
+    {itemUrl: '/', itemIcon: 'addIcon', itemText: 'Add / Create', hasSubmenu: 'true'},
+    {itemUrl: 'in-progress', itemIcon: 'workIcon', itemText: 'In progress', hasSubmenu: 'false'},
+    {itemUrl: 'parked-out', itemIcon: 'inactiveIcon', itemText: 'Parked Out', hasSubmenu: 'false'},
+    {itemUrl: 'backlog', itemIcon: 'folderIcon', itemText: 'Backlog', hasSubmenu: 'false'},
 ];

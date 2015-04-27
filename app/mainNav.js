@@ -20,20 +20,23 @@ taskManager.controller('submenuItemsController', function($scope){
     $scope.message = 'submenu Item';
 });
 
-taskManager.controller('navCtrl', function($scope, retrieveJsonFactory) {
-    $scope.mainmenuItems = {};
+taskManager.controller('navCtrl', function($scope) {
+    $scope.mainmenuItems = taskManagerData.mainMenuItemsData;
+    $scope.submenuItems = taskManagerData.submenuItemsData;
     
-    retrieveJsonFactory.getData().then(function(response){
-        $scope.mainmenuItems = response.data;
-        console.log($scope.mainmenuItems);
-    });
-    console.log($scope.mainmenuItems);
-    //$scope.mainmenuItems = mainMenuItemsData;
-//    $scope.submenuItems = taskManagerData.submenuItemsData;
-/*    
-    $scope.alo = function() {
-        $scope.class = {true: 'alo', false: ''};
-    }*/
+    $scope.checkSubmenu = function(mainmenuItem) {
+        //***************//
+        //mainmenuItem is the clicked item
+        //mainmenuItem has an itemMo property
+        //ifitemMo sdet to true, open submenu, else hide
+        //***************//
+        console.log(mainmenuItem.hasSubmenu);
+        if (mainmenuItem.hasSubmenu === "true")
+        {
+            alert("i have a submenu");
+        }
+        
+    }
 })
 
 //save state to localStorage
