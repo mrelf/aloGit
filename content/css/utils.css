@@ -17,3 +17,11 @@
     border-left-color: transparent;
     border-bottom-color: transparent;
 }
+
+/*show/hide elements*/
+.showElement {
+    display: block;
+}
+.hideElement {
+    display: none;
+}

@@ -1,46 +1,40 @@
 'use strict';
+
 //main nav controllers
 taskManager.controller('CreateTaskController', function ($scope, $state) {
     $scope.message = 'Create a new task';
+    $scope.$parent.alo = true;
 });
 
 taskManager.controller('InProgressController', function ($scope) {
     $scope.message = 'In progress';
+    $scope.$parent.alo = false;
 });
 
 taskManager.controller('ParkedOutController', function ($scope) {
     $scope.message = 'parked out';
+    $scope.$parent.alo = false;
 });
 
 taskManager.controller('BacklogController', function ($scope) {
     $scope.message = 'backlog';
+    $scope.$parent.alo = false;
 });
 
 taskManager.controller('submenuItemsController', function($scope){
     $scope.message = 'submenu Item';
+    $scope.$parent.alo = false;
 });
 
-taskManager.controller('navCtrl', function($scope) {
-    $scope.mainmenuItems = taskManagerData.mainMenuItemsData;
-    $scope.submenuItems = taskManagerData.submenuItemsData;
-    
-    $scope.checkSubmenu = function(mainmenuItem) {
-        //***************//
-        //mainmenuItem is the clicked item
-        //mainmenuItem has an itemMo property
-        //ifitemMo sdet to true, open submenu, else hide
-        //***************//
-        console.log(mainmenuItem.hasSubmenu);
-        if (mainmenuItem.hasSubmenu === "true")
-        {
-            alert("i have a submenu");
-        }
-        
-    }
-})
+taskManager.controller('alo11', function($scope){
+    $scope.message = 'Item';
+});
 
 //save state to localStorage
-taskManager.controller('setActiveMenu', function ($scope, $state, $location, $rootScope, StoredLocally) {
+taskManager.controller('setActiveMenu', function ($scope, $state, $location, $rootScope, StoredLocally, menuItems) {
+    
+    $scope.menuItem = menuItems;
+    
     var retrievedObj;
     if (StoredLocally.getItem('setActiveMenu') !== null) {
         retrievedObj = StoredLocally.getItem('setActiveMenu');
@@ -56,3 +50,4 @@ taskManager.controller('setActiveMenu', function ($scope, $state, $location, $ro
         StoredLocally.saveItem('setActiveMenu', currentState);
     });
 });
+
