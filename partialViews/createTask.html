@@ -1,7 +1,6 @@
-
-
 <!--content item-->
 <div class="contentContainer">
-{{ message }}
+    <ul>
+        <li data-ng-repeat='createTaskItem in createTaskMenuItem'><a data-ui-sref='{{ createTaskItem.itemUrl }}'>{{ createTaskItem.itemText }}</a></li>
+    </ul>
 </div>
-<div data-ui-view></div>

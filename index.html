@@ -24,16 +24,16 @@
             <div class="navigation" data-ng-controller='setActiveMenu as sam' >
                 <nav class="nav levelOne darkColoredNav">
                     <ul class='vertical' role="navigation">
-                        <li data-ng-repeat='mainmenuItem in menuItem.mainMenuData'><a data-ui-sref="{{ mainmenuItem.itemUrl }}" data-ui-sref-active='active' data-ng-click="alo = !alo"><span class='icon addIcon' data-ng-class="{{ mainmenuItem.itemIcon }}"></span>{{ mainmenuItem.itemText }}</a></li>                    
+                        <li data-ng-repeat='mainmenuItem in menuItem.mainMenuData'><a data-ui-sref="{{ mainmenuItem.itemUrl }}" data-ui-sref-active='active' data-ng-click="hasSubmenuItem = !hasSubmenuItem"><span class='icon addIcon' data-ng-class="{{ mainmenuItem.itemIcon }}"></span>{{ mainmenuItem.itemText }}</a></li>                    
                     </ul>
                 </nav>
-                
-                <!--subnavigation item-->
-                <nav class="submenuContainer subnav lightColoredNav levelOne--submenu" data-ng-show="alo">
+<!--                
+                subnavigation item
+                <nav class="submenuContainer subnav lightColoredNav levelOne--submenu" data-ng-show="hasSubmenuItem">
                     <ul class="vertical" role="navigation">
-                        <li data-ng-repeat="submenutItem in menuItem.subMenuData"><a data-ui-sref="{{ submenutItem.itemUrl }}">{{ submenutItem.itemText }}</a></li>
+                        <li data-ng-repeat="submenutItem in menuItem.subMenuData"><a data-ui-sref="{{ submenutItem.itemUrl }}" data-ui-sref-active='active'>{{ submenutItem.itemText }}</a></li>
                     </ul>
-                </nav>
+                </nav>-->
             </div>
             <!--    END left side nav   -->
             
