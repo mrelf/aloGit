@@ -67,6 +67,7 @@ h4 {
 /** site content settings   **/
 .content {
     padding: 0 0 0 50px;
+    width: 100%;
 }
 .mainContentContainer {
     display: flex;

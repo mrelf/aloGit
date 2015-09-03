@@ -74,3 +74,24 @@ nav .vertical li {
     top: 9px;
     right: -25px;
 }
+.centered {
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+/*** horizontal center any direct child of parent ***/
+.centered > * {
+    margin: 0 auto;
+}
+/***    2 column content    ***/
+.splitLayout {
+    display: flex;
+    flex-direction: row;
+}
+.splitLayout > *{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
