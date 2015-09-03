@@ -2,7 +2,7 @@
 <div class="contentContainer splitLayout">
     <div>
         <form>
-            <input type="text" name="summary" id='summay' placeholder="Summary..." />
+            <input type="text" name="summary" id='summay' placeholder="Summary..." data-ng-model="user.name" />
             <select name='priority' id='priority'>
                 <option value='' disabled selected style='display: none'>Test value</option>
                 <option value='test'>Test value</option>
@@ -15,7 +15,8 @@
         </form>
     </div>
     <div>
-        right side
+        <h1>Preview</h1>
+        <div data-ng-bind="user.name"></div>
     </div>
 </div>
 
