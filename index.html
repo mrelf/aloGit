@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         
         <base href="/" />
-        
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <link rel="stylesheet" href="content/css/lib/jquery-ui.min.css">
         <link rel="stylesheet" href="content/css/variables.css">
         <link rel="stylesheet" href="content/css/main.css">
@@ -27,13 +27,6 @@
                         <li data-ng-repeat='mainmenuItem in menuItem.mainMenuData'><a data-ui-sref="{{ mainmenuItem.itemUrl }}" data-ui-sref-active='active' data-ng-click="hasSubmenuItem = !hasSubmenuItem"><span class='icon addIcon' data-ng-class="{{ mainmenuItem.itemIcon }}"></span>{{ mainmenuItem.itemText }}</a></li>                    
                     </ul>
                 </nav>
-<!--                
-                subnavigation item
-                <nav class="submenuContainer subnav lightColoredNav levelOne--submenu" data-ng-show="hasSubmenuItem">
-                    <ul class="vertical" role="navigation">
-                        <li data-ng-repeat="submenutItem in menuItem.subMenuData"><a data-ui-sref="{{ submenutItem.itemUrl }}" data-ui-sref-active='active'>{{ submenutItem.itemText }}</a></li>
-                    </ul>
-                </nav>-->
             </div>
             <!--    END left side nav   -->
             

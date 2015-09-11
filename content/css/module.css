@@ -1,5 +1,5 @@
 /******************/
-/*** navigation ***/
+/*** NAVIGATION ***/
 /******************/
 
 /*  general settings   */
@@ -17,7 +17,9 @@ nav a{
     border-bottom: 0;
     position: relative;
 }
-
+.contentContainer  {
+    width: 100%;
+}
 /*  vertical nav   */
 nav .vertical {
     flex: 1 100%;
@@ -80,6 +82,11 @@ nav .vertical li {
     display: flex;
     width: 100%;
 }
+
+/***************/
+/*** CONTENT ***/
+/***************/
+
 /*** horizontal center any direct child of parent ***/
 .centered > * {
     margin: 0 auto;
@@ -88,10 +95,29 @@ nav .vertical li {
 .splitLayout {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .splitLayout > *{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: stretch;
+    flex: 1;
+    padding: 1em 0 0 1em
+}
+
+/*************/
+/*** FORMS ***/
+/*************/
+input, textarea, select {
+    padding: 1rem .3rem;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid var(--light-bg-border-color_darker);
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }

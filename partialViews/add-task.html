@@ -1,22 +1,39 @@
 <!--content item-->
-<div class="contentContainer splitLayout">
-    <div>
-        <form>
-            <input type="text" name="summary" id='summay' placeholder="Summary..." data-ng-model="user.name" />
-            <select name='priority' id='priority'>
+<div class="contentContainer">
+    <div data-ng-controller='formController' class="splitLayout _equalHalf">
+        <form data-ng-submit='submitForm()' name='addTask' novalidate>
+            <p>
+                <input type="text" name="summary" id='summay' placeholder="Summary..." data-ng-model="formData.name" required />
+            </p>
+            <p>
+            <select name='priority' id='priority' data-ng-model='formData.priority' required>
                 <option value='' disabled selected style='display: none'>Test value</option>
-                <option value='test'>Test value</option>
+                <option value='High'>High</option>
+                <option value='Middle'>Middle</option>
+                <option value='Low'>Low</option>
             </select>
-            <select name='asignee' id='asignee'>
+            </p>
+            <p>
+            <select name='asignee' id='asignee' data-ng-model='formData.asignee' required>
                 <option value='' disabled selected style='display: none'>Select asignee</option>
-                <option value='test'>Test value</option>
+                <option value='test'>Bugs Bunny</option>
+                <option value='test'>Pepe le Pew</option>
+                <option value='test'>Daffy Duck</option>
             </select>
-            <textarea name="description" id='description' placeholder="Description"></textarea>
+            </p>
+            <p>
+            <textarea name="description" id='description' placeholder="Description" data-ng-model='formData.description' required></textarea>
+            </p>
+            <p>
+                <input type="submit" id="submit" value="Save Task" data-ng-disabled='addTask.$invalid' />
+            </p>
         </form>
-    </div>
-    <div>
-        <h1>Preview</h1>
-        <div data-ng-bind="user.name"></div>
+        <div>
+            <h1 data-ng-bind="formData.name"></h1>
+            <p data-ng-bind='formData.priority'></p>
+            <p data-ng-bind='formData.asignee'></p>
+            <p data-ng-bind='formData.description'></p>
+        </div>
     </div>
 </div>
 

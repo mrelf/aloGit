@@ -44,3 +44,11 @@ taskManager.controller('setActiveMenu', function ($scope, $state, $location, $ro
     });
 });
 
+//form controller
+taskManager.controller('formController', function formController($scope){
+
+    $scope.formData = {};
+    $scope.submitForm = function submitForm() {
+        
+    }
+})
