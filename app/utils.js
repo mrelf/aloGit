@@ -5,17 +5,10 @@
 save and get elements from localStorage
 built as an angularJS service
 */
-taskManager.factory('StoredLocally', function ($state, $rootScope) {
-    var storedElem = {};
-    
-    storedElem.saveItem = function (lsKey, lsValue) {
-        localStorage.setItem(lsKey, JSON.stringify(lsValue));
+taskManager.factory('localStorageFactory', function localStorageFactory(){
+    return {
+        halo: function(){
+            alert('alo');
+        }
     }
-    
-    storedElem.getItem = function(lsKey) {
-        var retrievedObject = localStorage.getItem(lsKey);
-        return JSON.parse(retrievedObject);
-    }
-    
-    return storedElem;
-});
+})

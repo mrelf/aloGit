@@ -24,10 +24,11 @@ taskManager.controller('BacklogController', function ($scope) {
 });
 
 //save state to localStorage
-taskManager.controller('setActiveMenu', function ($scope, $state, $location, $rootScope, StoredLocally, menuItems) {
+taskManager.controller('setActiveMenu', function ($scope, $state, $location, $rootScope, menuItems) {
     
     $scope.menuItem = menuItems;
     
+/*
     var retrievedObj;
     if (StoredLocally.getItem('setActiveMenu') !== null) {
         retrievedObj = StoredLocally.getItem('setActiveMenu');
@@ -42,13 +43,14 @@ taskManager.controller('setActiveMenu', function ($scope, $state, $location, $ro
         var currentState = $state.current.name;
         StoredLocally.saveItem('setActiveMenu', currentState);
     });
+*/
 });
 
 //form controller
-taskManager.controller('formController', function formController($scope){
+taskManager.controller('formController', function formController($scope, localStorageFactory){
 
     $scope.formData = {};
     $scope.submitForm = function submitForm() {
-        
+        localStorageFactory.halo();
     }
 })
