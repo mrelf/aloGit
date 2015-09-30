@@ -44,4 +44,5 @@ taskManager.config(function ($stateProvider, $urlRouterProvider, $locationProvid
             templateUrl: 'partialViews/backlog.html',        
             controller: 'BacklogController'
         })
+    $urlRouterProvider.otherwise('/create-task');
 });
